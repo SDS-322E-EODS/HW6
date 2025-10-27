@@ -43,7 +43,7 @@ Read the ***Abstract*** of the article and the section called *Results of Morpho
 
 ## Question 2: (1 pt)
 
-Under the supplemental information, I retrieved the data from a word document into a `.csv` document. Read in the dataset. 
+The data were retrieved from a word document in the supplemental information and transferred into a `.csv` document. Read in the dataset. 
 
 ```{r}
 # download data from GitHub
