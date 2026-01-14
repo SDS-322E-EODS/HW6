@@ -46,14 +46,14 @@ Read the ***Abstract*** of the article and the section called *Results of Morpho
 The data were retrieved from a word document in the supplemental information and transferred into a `.csv` document. Read in the dataset. 
 
 ```{r}
-# download data from GitHub
+# this dataset should be in the same directory as your HW6 R Project
 sealions <- read_csv("Sealions.csv")
 ```
 
 How many rows and how many columns are in this dataset? What does a row represent? What does a column represent?
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
@@ -74,7 +74,7 @@ sealions |>
 When importing this dataset into RStudio, which variables were considered numeric? Use the `is.numeric()` predicate function here. 
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
@@ -95,7 +95,7 @@ Using `mutate()` and `across()`, replace all `-` in the dataset with the missing
 NOTE: Look at the examples in `?across` to get a sense of how to use the `across()` function.
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
 sealions |> 
     ## Replace all "-" with NA
     mutate(across(where(is.character), ~ na_if(.x, "-"))) |> 
@@ -105,7 +105,7 @@ sealions |>
 What is the mean rostral tip of mandible `C`?
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
@@ -144,14 +144,14 @@ Use the `separate()` function on `sealions` to split the `ID` variable into two 
 Save the resulting dataset as `sealions_clean`.
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
 How many sealions are male/female?
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
@@ -164,7 +164,7 @@ How many sealions are male/female?
 Using `tidyverse` functions, only keep numeric variables and scale each numeric variable. Save the resulting dataset as `sealions_num`. What should the mean of the scaled variable of the rostral tip of mandible C be?
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
@@ -177,7 +177,7 @@ Using `tidyverse` functions, only keep numeric variables and scale each numeric 
 Let's  perform PCA on the measurements available for the fossil specimen GKZ-N 00001. Using the function `prcomp()`, calculate the principal components (PCs) for the scaled data, `sealions_num`, obtained in the previous question. Construct a scree plot with the function `fviz_eig()` from the package `factoextra`. What is the cumulative percentage of explained variance for PC1 and PC2? 
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
@@ -190,7 +190,7 @@ Let's  perform PCA on the measurements available for the fossil specimen GKZ-N 0
 How many *known species* are there in `sealions_clean`? Therefore, how many clusters should we look for to identify what species GKZ-N 00001 most likely belongs to? 
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
@@ -199,7 +199,7 @@ How many *known species* are there in `sealions_clean`? Therefore, how many clus
 Try using the PAM clustering algorithm using the `pam()` function in R (it is similar to K-means). Perform the PAM clustering algorithm on `sealions_num`, run the PAM clustering algorithm with 3 clusters and save the results to an object named `pam_results`.
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
  
 ```
 
@@ -210,7 +210,7 @@ Try using the PAM clustering algorithm using the `pam()` function in R (it is si
 Represent the clusters along the first two principal components and specify to shape the observations by their `species` in the aesthetics. *Note: you can either use `ggplot` or `fviz_cluster()`.* 
 
 ```{r}
-# your code goes below (make sure to edit comment)
+# your code goes below (make sure to edit this comment)
 fviz_cluster(pam_results, geom = NULL) +  ## Add geoms to complete the plot
 ```
 
