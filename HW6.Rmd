@@ -47,7 +47,7 @@ The data were retrieved from a word document in the supplemental information and
 
 ```{r}
 # this dataset should be in the same directory as your HW6 R Project
-sealions <- read_csv("Sealions.csv", na = '-')
+sealions <- read_csv("Sealions.csv")
 ```
 
 How many rows and how many columns are in this dataset? What does a row represent? What does a column represent?
